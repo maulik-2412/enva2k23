@@ -6,10 +6,15 @@
 }
 
 nav {
+  opacity: 0.5;
+  width: 100%;
+  position: absolute;
+  top:0%;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #344357;
+  background: rgba(44, 46, 67,.5);
   padding: 1em 2em;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
 }
@@ -20,12 +25,14 @@ nav {
 }
 
 .nav-logo img {
+  opacity: 1 !important;
   width: 100%;
   height: auto;
   cursor: grabbing;
 }
 
 .navbar {
+  opacity: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,7 +86,7 @@ nav {
     right: 0%;
     width: 45%;
     height: 100vh;
-    background: #344357;
+    background: rgba(44, 46, 67,.5);
     padding: 1em 0px;
     transition: 0.5s ease-in-out;
   }
@@ -336,4 +343,32 @@ body {
 
 .tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
   background: var(--primary);
+}
+
+/* home */
+.home-content{
+  position: absolute;
+  top:40%;
+  left:20%;
+  color:white;
+  font-size: 3rem;
+}
+.home-heading {
+  overflow: hidden;
+  animation: typing 3s steps(20);
+}
+
+.home-texxt {
+  overflow: hidden;
+  animation: typing 3s steps(20) both;
+  animation-delay: 3s; /* delay the animation start by 3s */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
