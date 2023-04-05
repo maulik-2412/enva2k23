@@ -12,6 +12,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.10.0",
     "react-scripts": "5.0.1",
+    "react-slider-swiper": "^2.0.6",
     "react-tsparticles": "^2.9.3",
     "swiper": "^9.2.0",
     "tsparticles": "^2.9.3",

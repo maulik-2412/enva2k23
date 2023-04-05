@@ -1,14 +1,16 @@
-import React from 'react'
-import Particle from '../components/Particle'
+import React from "react";
+import Particle from "../components/Particle";
 
 const Home = () => {
   return (
-    <div><Particle/>
-    <div className='home-content'>
-      <h1 className='home-heading'>ENVA '23</h1>
-      <h4 className='home-texxt'>Coming Soon...</h4>
-    </div></div>
-  )
-}
+    <div>
+      <Particle />
+      <div className="home-content">
+        <h1 className="home-heading">ENVA'23</h1>
+        <h4 className="home-text">Coming Soon...</h4>
+      </div>
+    </div>
+  );
+};
 
-export default Home
+export default Home;
