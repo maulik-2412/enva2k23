@@ -7,7 +7,7 @@ const Home = () => {
       <Particle />
       <div className="home-content">
         <h1 className="home-heading">ENVA'23</h1>
-        <h4 className="home-text">Coming Soon...</h4>
+        <h4 className="home-text">ComingSoon...</h4>
       </div>
     </div>
   );

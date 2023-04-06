@@ -5,14 +5,14 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
 import { EffectCoverflow, Pagination, Navigation } from "swiper";
-
 import slide_image_1 from "../assets/images/img.jpg";
+import Particle from "../components/Particle";
 
 function Gallery() {
   return (
     <div className="container">
+    <Particle/>
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -56,7 +56,7 @@ function Gallery() {
           <img src={slide_image_1} alt="slide_image" />
         </SwiperSlide>
 
-        <div className="slider-controler">
+        {/* <div className="slider-controler">
           <div className="swiper-button-prev slider-arrow">
             <ion-icon name="arrow-back-outline"></ion-icon>
           </div>
@@ -64,7 +64,7 @@ function Gallery() {
             <ion-icon name="arrow-forward-outline"></ion-icon>
           </div>
           <div className="swiper-pagination"></div>
-        </div>
+        </div> */}
       </Swiper>
     </div>
   );
