@@ -23,7 +23,7 @@ const Particle = () => {
       options={{
         background: {
           color: {
-            value: "#2c2e43",
+            value: "#0f3262",
           },
         },
         fpsLimit: 120,
@@ -51,17 +51,17 @@ const Particle = () => {
         },
         particles: {
           number: {
-            value: 6,
+            value: 50,
             density: {
               enable: true,
-              value_area: 800,
+              value_area: 1514.7408198734,
             },
           },
           color: {
-            value: "#1b1e34",
+            value: "#48c4db",
           },
           shape: {
-            type: "polygon",
+            type: "circle",
             stroke: {
               width: 0,
               color: "#000",
@@ -76,7 +76,7 @@ const Particle = () => {
             },
           },
           opacity: {
-            value: 0.3,
+            value: 1,
             random: true,
             anim: {
               enable: false,
@@ -86,12 +86,12 @@ const Particle = () => {
             },
           },
           size: {
-            value: 160,
-            random: false,
+            value:0.005,
+            random: true,
             anim: {
               enable: true,
-              speed: 10,
-              size_min: 40,
+              speed: 4,
+              size_min: 15,
               sync: false,
             },
           },
@@ -104,14 +104,14 @@ const Particle = () => {
           },
           move: {
             enable: true,
-            speed: 8,
+            speed: 20.728032271951786,
             direction: "none",
             random: false,
             straight: false,
             out_mode: "out",
             bounce: false,
             attract: {
-              enable: false,
+              enable: true,
               rotateX: 600,
               rotateY: 1200,
             },
@@ -122,7 +122,7 @@ const Particle = () => {
           events: {
             onhover: {
               enable: false,
-              mode: "grab",
+              mode: "repulse",
             },
             onclick: {
               enable: false,

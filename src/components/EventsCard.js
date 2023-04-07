@@ -14,7 +14,7 @@ const EventsCard = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit qui
               perferendis tenetur iure quod provident sed quas dignissimos,
               deleniti eos optio!
-              <button>Register below</button>
+              {/* <button>Register below</button> */}
             </p>
             <button className="event-register">Register</button>
           </div>

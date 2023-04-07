@@ -1,6 +1,7 @@
 import React from "react";
 import Particle from "../components/Particle";
 
+
 const Home = () => {
   return (
     <div>
