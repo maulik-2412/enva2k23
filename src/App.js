@@ -6,6 +6,7 @@ import { BrowserRouter as Router,Route ,Routes} from 'react-router-dom';
 import Home from './pages/Home';
 import Gallery from './pages/Gallery';
 import About from './pages/About';
+import Events from './pages/Events';
 function App() {
   const [loading, setloading] = useState(true);
   // if (loading) {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/" element={<Home/>}/>
           <Route path="/gallery" element={<Gallery/>}/>
           <Route path="/about" element={<About/>}/>
+          <Route path="/events" element={<Events/>}/>
         </Routes>
        </Router>  }
     </div>

@@ -1,73 +1,45 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
+// Import Swiper styles
 import "swiper/css";
-import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { EffectCoverflow, Pagination, Navigation } from "swiper";
-import slide_image_1 from "../assets/images/img.jpg";
-import Particle from "../components/Particle";
 
-function Gallery() {
+import sliderimg from '../assets/images/img.jpg'
+// import required modules
+import { Autoplay, Pagination, Navigation } from "swiper";
+
+import Particle from '../components/Particle';
+export default function App() {
   return (
-    <div className="container">
+    <div className="swiperpage">
     <Particle/>
       <Swiper
-        effect={"coverflow"}
-        grabCursor={true}
+        spaceBetween={30}
         centeredSlides={true}
-        loop={true}
-        slidesPerView={"auto"}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 2.5,
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
         }}
-        pagination={{ el: ".swiper-pagination", clickable: true }}
-        navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+        pagination={{
           clickable: true,
         }}
-        modules={[EffectCoverflow, Pagination, Navigation]}
-        className="swiper_container"
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        className="mySwiper"
       >
-        <SwiperSlide>
-          <img src={slide_image_1} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_1} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_1} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_1} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_1} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_1} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_1} alt="slide_image" />
-        </SwiperSlide>
-
-        {/* <div className="slider-controler">
-          <div className="swiper-button-prev slider-arrow">
-            <ion-icon name="arrow-back-outline"></ion-icon>
-          </div>
-          <div className="swiper-button-next slider-arrow">
-            <ion-icon name="arrow-forward-outline"></ion-icon>
-          </div>
-          <div className="swiper-pagination"></div>
-        </div> */}
+        <SwiperSlide><img src={sliderimg}/></SwiperSlide>
+        <SwiperSlide><img src={sliderimg}/></SwiperSlide>
+        <SwiperSlide><img src={sliderimg}/></SwiperSlide>
+        <SwiperSlide><img src={sliderimg}/></SwiperSlide>
+        <SwiperSlide><img src={sliderimg}/></SwiperSlide>
+        <SwiperSlide><img src={sliderimg}/></SwiperSlide>
+        <SwiperSlide><img src={sliderimg}/></SwiperSlide>
+        <SwiperSlide><img src={sliderimg}/></SwiperSlide>
+        <SwiperSlide><img src={sliderimg}/></SwiperSlide>
       </Swiper>
     </div>
   );
 }
-
-export default Gallery;
