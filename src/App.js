@@ -7,6 +7,9 @@ import Home from './pages/Home';
 import Gallery from './pages/Gallery';
 import About from './pages/About';
 import Events from './pages/Events';
+import Sponsors from './pages/Sponsors';
+import Contact from './pages/Contact';
+import Team from './pages/Team';
 function App() {
   const [loading, setloading] = useState(true);
   // if (loading) {
@@ -26,6 +29,9 @@ function App() {
           <Route path="/gallery" element={<Gallery/>}/>
           <Route path="/about" element={<About/>}/>
           <Route path="/events" element={<Events/>}/>
+          <Route path="/sponsors" element={<Sponsors/>}/>
+          <Route path="/contact" element={<Contact/>}/>
+          <Route path="/team" element={<Team/>}/>
         </Routes>
        </Router>  }
     </div>

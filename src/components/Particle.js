@@ -23,7 +23,7 @@ const Particle = () => {
       options={{
         background: {
           color: {
-            value: "#0f3262",
+            value: "#1D2D50",
           },
         },
         fpsLimit: 120,
@@ -51,14 +51,14 @@ const Particle = () => {
         },
         particles: {
           number: {
-            value: 50,
+            value: 10,
             density: {
               enable: true,
               value_area: 1514.7408198734,
             },
           },
           color: {
-            value: "#48c4db",
+            value: "#31E1F7",
           },
           shape: {
             type: "circle",
