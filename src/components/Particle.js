@@ -259,7 +259,7 @@ bubblesf();
   }
   render(){
     return(
-      <div class="bubbles"></div>
+      <div className="bubbles"></div>
     );
   }
 }

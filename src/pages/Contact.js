@@ -34,44 +34,44 @@ const Contact = () => {
     }
   },[])
   return (
-    <div class="container">
+    <div className="container">
       <Particle />
-      <span class="big-circle"></span>
-      <img src="" class="square" alt="" />
-      <div class="form">
-        <div class="contact-info">
-          <h3 class="title">Reach Out</h3>
-          <p class="text">
+      <span className="big-circle"></span>
+      <img src="" className="square" alt="" />
+      <div className="form">
+        <div className="contact-info">
+          <h3 className="title">Reach Out</h3>
+          <p className="text">
           
           </p>
 
-          <div class="info">
-            <div class="information">
-              <img src={location} class="icon" alt="" />
+          <div className="info">
+            <div className="information">
+              <img src={location} className="icon" alt="" />
               <p>C-4 MARKET, Janakpuri, New Delhi</p>
             </div>
-            <div class="information">
-              <img src={email} class="icon" alt="" />
+            <div className="information">
+              <img src={email} className="icon" alt="" />
               <p>prakriti@msit.in</p>
             </div>
-            <div class="information">
-              <img src={phone} class="icon" alt="" />
+            <div className="information">
+              <img src={phone} className="icon" alt="" />
               <p>Mayank: 9560585673</p>
 
-              <img src={phone} class="icon" alt="" />
+              <img src={phone} className="icon" alt="" />
               <p>Parth: 9999554630</p>
             </div>
           </div>
 
-          <div class="social-media">
+          <div className="social-media">
             <p>Connect with us :</p>
-            <div class="social-icons">
+            <div className="social-icons">
 
               <a href="https://twitter.com/prakriti_msit"
                 target="_blank"
                 alt="twitter"
                 rel="noreferrer">
-                <i class="fab fa-twitter"></i>
+                <i className="fab fa-twitter"></i>
               </a>
               <a
                 href="https://www.instagram.com/prakriti_msit/"
@@ -79,7 +79,7 @@ const Contact = () => {
                 alt="insta"
                 rel="noreferrer"
               >
-                <i class="fab fa-instagram"></i>
+                <i className="fab fa-instagram"></i>
               </a>
               <a
                 href="https://www.linkedin.com/company/prakritimsit/mycompany/"
@@ -87,39 +87,39 @@ const Contact = () => {
                 alt="linkedin"
                 rel="noreferrer"
               >
-                <i class="fab fa-linkedin-in"></i>
+                <i className="fab fa-linkedin-in"></i>
               </a>
             </div>
           </div>
         </div>
 
-        <div class="contact-form">
-          <span class="circle one"></span>
-          <span class="circle two"></span>
+        <div className="contact-form">
+          <span className="circle one"></span>
+          <span className="circle two"></span>
 
-          <form action="index.html" autocomplete="off">
-            <h3 class="title">Contact us</h3>
-            <div class="input-container">
-              <input type="text" name="name" class="input" />
-              <label for="">Name</label>
+          <form action="index.html">
+            <h3 className="title">Contact us</h3>
+            <div className="input-container">
+              <input type="text" name="name" className="input" />
+              <label htmlFor="">Name</label>
               <span>Name</span>
             </div>
-            <div class="input-container">
-              <input type="email" name="email" class="input" />
-              <label for="">Email</label>
+            <div className="input-container">
+              <input type="email" name="email" className="input" />
+              <label htmlFor="">Email</label>
               <span>Email</span>
             </div>
-            <div class="input-container">
-              <input type="tel" name="phone" class="input" />
-              <label for="">Phone</label>
+            <div className="input-container">
+              <input type="tel" name="phone" className="input" />
+              <label htmlFor="">Phone</label>
               <span>Phone</span>
             </div>
-            <div class="input-container textarea">
-              <textarea name="message" class="input"></textarea>
-              <label for="">Message</label>
+            <div className="input-container textarea">
+              <textarea name="message" className="input"></textarea>
+              <label htmlFor="">Message</label>
               <span>Message</span>
             </div>
-            <input type="submit" value="Send" class="btn" />
+            <input type="submit" value="Send" className="btn" />
           </form>
         </div>
       </div>
