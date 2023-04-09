@@ -1,45 +1,97 @@
-import React, { useRef, useState } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import React from 'react'
+import img from '../assets/images/img.jpg'
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+import Particle from '../components/Particle'
 
-import sliderimg from '../assets/images/img.jpg'
-// import required modules
-import { Autoplay, Pagination, Navigation } from "swiper";
-
-import Particle from '../components/Particle';
-export default function App() {
+const Gallery = () => {
   return (
-    <div className="swiperpage">
-    <Particle/>
-      <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
-      >
-        <SwiperSlide><img src={sliderimg}/></SwiperSlide>
-        <SwiperSlide><img src={sliderimg}/></SwiperSlide>
-        <SwiperSlide><img src={sliderimg}/></SwiperSlide>
-        <SwiperSlide><img src={sliderimg}/></SwiperSlide>
-        <SwiperSlide><img src={sliderimg}/></SwiperSlide>
-        <SwiperSlide><img src={sliderimg}/></SwiperSlide>
-        <SwiperSlide><img src={sliderimg}/></SwiperSlide>
-        <SwiperSlide><img src={sliderimg}/></SwiperSlide>
-        <SwiperSlide><img src={sliderimg}/></SwiperSlide>
-      </Swiper>
+    <div class="gallery_page">
+      <Particle/>
+      <div class="portfolio">
+
+  <a href="#" class="card">
+    <div class="content">
+      <span class="title">Web Design</span>
+      <span class="category">Mobile / Design / Rebranding</span>
     </div>
-  );
+    <div class="image">
+      <img src={img} alt="" />
+    </div>
+  </a>
+
+  <a href="#" class="card">
+    <div class="content">
+      <span class="title">UX Design</span>
+      <span class="category">UX / UI / Research </span>
+    </div>
+    <div class="image">
+      <img src={img} alt="" />
+    </div>
+  </a>
+
+  <a href="#" class="card">
+    <div class="content">
+      <span class="title">Concepts</span>
+      <span class="category">Design / Creative</span>
+    </div>
+    <div class="image">
+      <img src={img} alt="" />
+    </div>
+  </a>
+
+  <a href="#" class="card">
+    <div class="content">
+      <span class="title">Creative & Cool</span>
+      <span class="category">Design / Food</span>
+    </div>
+    <div class="image">
+      <img src={img} alt="" />
+    </div>
+  </a>
+
+  <a href="#" class="card">
+    <div class="content">
+      <span class="title">AR-VR</span>
+      <span class="category">VR / AR / Creative</span>
+    </div>
+    <div class="image">
+      <img src={img} alt="" />
+    </div>
+  </a>
+
+  <a href="#" class="card">
+    <div class="content">
+      <span class="title">Logo</span>
+      <span class="category">Design / Logo / Clothing</span>
+    </div>
+    <div class="image">
+      <img src={img} alt="" />
+    </div>
+  </a>
+
+  <a href="#" class="card">
+    <div class="content">
+      <span class="title">Art</span>
+      <span class="category">Drawing / Painting / Abstract</span>
+    </div>
+    <div class="image">
+      <img src={img} alt="" />
+    </div>
+  </a>
+
+  <a href="#" class="card">
+    <div class="content">
+      <span class="title">Native Apps</span>
+      <span class="category">Coding / Mobile </span>
+    </div>
+    <div class="image">
+      <img src={img} alt="" />
+    </div>
+  </a>
+
+</div>
+    </div>
+  )
 }
+
+export default Gallery

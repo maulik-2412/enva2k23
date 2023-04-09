@@ -6,6 +6,7 @@ import Particle from "../components/Particle";
 const Home = () => {
   return (
     <div>
+    
       
       <div className="home-content">
         <Particle />
@@ -39,8 +40,9 @@ const Home = () => {
             }}
           />
         </svg>
-        
       </div>
+
+    
     </div>
   );
 };

@@ -4,11 +4,17 @@ const About = () => {
   return (
     <div>
       <Particle />
+
+      
+
+      
       <div className="about-section">
         <div className="about-event">
           <h1>
             ABOUT THE EVENT
           </h1>
+
+
 
           <p>
             ENVA, the annual college Fest, organised by Prakriti MSIT is a
