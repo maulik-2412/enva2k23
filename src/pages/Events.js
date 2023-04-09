@@ -4,12 +4,13 @@ import Particle from '../components/Particle'
 const Events = () => {
   return (
     <div className='eventpage'>
-    <Particle/>
+    
       <EventsCard/>
       <EventsCard/>
       <EventsCard/>
       <EventsCard/>
       <EventsCard/>
+      <Particle/>
     </div>
   )
 }

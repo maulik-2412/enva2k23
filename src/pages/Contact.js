@@ -37,7 +37,7 @@ const Contact = () => {
     <div class="container">
       <Particle />
       <span class="big-circle"></span>
-      <img src={shape} class="square" alt="" />
+      <img src="" class="square" alt="" />
       <div class="form">
         <div class="contact-info">
           <h3 class="title">Let's get in touch</h3>
