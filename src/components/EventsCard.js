@@ -6,7 +6,7 @@ const EventsCard = () => {
         <div className="card__content">
           <div className="card__front">
             <h3 className="card__title">Event1</h3>
-            <p className="card__subtitle">Open mic</p>
+            <p className="card__subtitle">Open Mic </p>
           </div>
 
           <div className="card__back">

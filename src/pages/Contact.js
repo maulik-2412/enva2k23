@@ -40,33 +40,33 @@ const Contact = () => {
       <img src="" class="square" alt="" />
       <div class="form">
         <div class="contact-info">
-          <h3 class="title">Let's get in touch</h3>
+          <h3 class="title">Reach Out</h3>
           <p class="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-            dolorum adipisci recusandae praesentium dicta!
+          
           </p>
 
           <div class="info">
             <div class="information">
               <img src={location} class="icon" alt="" />
-              <p>92 Cherry Drive Uniondale, NY 11553</p>
+              <p>C-4 MARKET, Janakpuri, New Delhi</p>
             </div>
             <div class="information">
               <img src={email} class="icon" alt="" />
-              <p>lorem@ipsum.com</p>
+              <p>prakriti@msit.in</p>
             </div>
             <div class="information">
               <img src={phone} class="icon" alt="" />
-              <p>123-456-789</p>
+              <p>Mayank: 9560585673</p>
+
+              <img src={phone} class="icon" alt="" />
+              <p>Parth: 9999554630</p>
             </div>
           </div>
 
           <div class="social-media">
             <p>Connect with us :</p>
             <div class="social-icons">
-              {/* <a href="#">
-                <i class="fab fa-facebook-f"></i>
-              </a> */}
+
               <a href="https://twitter.com/prakriti_msit"
                 target="_blank"
                 alt="twitter"
