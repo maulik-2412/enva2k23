@@ -1,8 +1,7 @@
-import React,{useState} from 'react';
+import React,{useEffect, useState} from 'react';
 import './App.css';
 import './index.css';
 import Header from './components/Header';
-import { BrowserRouter as Router,Route ,Routes} from 'react-router-dom';
 import Home from './pages/Home';
 import Gallery from './pages/Gallery';
 import About from './pages/About';
@@ -10,6 +9,8 @@ import Events from './pages/Events';
 import Sponsors from './pages/Sponsors';
 import Contact from './pages/Contact';
 import Team from './pages/Team';
+import Preloader from './pages/Preloader';
+import { BrowserRouter as Router,Route ,Routes} from 'react-router-dom';
 function App() {
   const [loading, setloading] = useState(true);
   // if (loading) {
@@ -19,9 +20,16 @@ function App() {
   //     setloading(false);
   //   }, 2000);
   // }
+   useEffect(() => {
+    if (loading) {
+      setTimeout(() => {
+        setloading(false);
+      }, 7000);
+    }
+  }, [loading]);
   return (
     <div className="App">
-     {loading && 
+     {loading ? (<Preloader/>) : (
        <Router>
        <Header/>
         <Routes>
@@ -33,7 +41,7 @@ function App() {
           <Route path="/contact" element={<Contact/>}/>
           <Route path="/team" element={<Team/>}/>
         </Routes>
-       </Router>  }
+       </Router>  )}
     </div>
   );
 }
