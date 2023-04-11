@@ -1,4 +1,4 @@
-import { client } from "../appwrite";
+import { client } from "../AppwriteConfig";
 import { Account, AppwriteException } from "appwrite";
 
 const account = new Account(client);

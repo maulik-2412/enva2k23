@@ -1,6 +1,5 @@
 import React from 'react'
 import Particle from "../components/Particle";
-// import imgg from '../assets/images/img.jpg'
 import yash from '../assets/team/yash.jpg'
 import amit from '../assets/team/amit.jpg'
 import maulik from '../assets/team/maulik.jpeg'

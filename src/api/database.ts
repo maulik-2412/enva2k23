@@ -1,5 +1,5 @@
 import { Databases } from "appwrite";
-import { client } from "../appwrite";
+import { client } from "../AppwriteConfig";
 
 const database = new Databases(client);
 
