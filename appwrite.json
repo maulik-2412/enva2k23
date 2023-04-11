@@ -1,0 +1,139 @@
+{
+    "projectId": "enva",
+    "projectName": "Enva 2023",
+    "collections": [
+        {
+            "$id": "64339734c80e95021be9",
+            "$createdAt": "2023-04-10T04:57:24.820+00:00",
+            "$updatedAt": "2023-04-10T04:57:24.820+00:00",
+            "$permissions": [],
+            "databaseId": "envadb",
+            "name": "events",
+            "enabled": true,
+            "documentSecurity": false,
+            "attributes": [
+                {
+                    "key": "event_name",
+                    "type": "string",
+                    "status": "available",
+                    "required": true,
+                    "array": false,
+                    "size": 1000,
+                    "default": null
+                },
+                {
+                    "key": "event_description",
+                    "type": "string",
+                    "status": "available",
+                    "required": true,
+                    "array": false,
+                    "size": 1000,
+                    "default": null
+                },
+                {
+                    "key": "event_image_id",
+                    "type": "string",
+                    "status": "available",
+                    "required": false,
+                    "array": false,
+                    "size": 200,
+                    "default": null
+                },
+                {
+                    "key": "day",
+                    "type": "string",
+                    "status": "available",
+                    "required": false,
+                    "array": false,
+                    "elements": [
+                        "DAY1",
+                        "DAY2"
+                    ],
+                    "format": "enum",
+                    "default": "DAY1"
+                }
+            ],
+            "indexes": []
+        },
+        {
+            "$id": "sponsors",
+            "$createdAt": "2023-04-10T04:59:41.922+00:00",
+            "$updatedAt": "2023-04-10T04:59:41.922+00:00",
+            "$permissions": [],
+            "databaseId": "envadb",
+            "name": "sponsors",
+            "enabled": true,
+            "documentSecurity": false,
+            "attributes": [
+                {
+                    "key": "sponsor_name",
+                    "type": "string",
+                    "status": "available",
+                    "required": true,
+                    "array": false,
+                    "size": 1000,
+                    "default": null
+                },
+                {
+                    "key": "image_id",
+                    "type": "string",
+                    "status": "available",
+                    "required": true,
+                    "array": false,
+                    "size": 1000,
+                    "default": null
+                }
+            ],
+            "indexes": []
+        },
+        {
+            "$id": "team",
+            "$createdAt": "2023-04-10T05:00:04.997+00:00",
+            "$updatedAt": "2023-04-10T05:00:04.997+00:00",
+            "$permissions": [],
+            "databaseId": "envadb",
+            "name": "team",
+            "enabled": true,
+            "documentSecurity": false,
+            "attributes": [
+                {
+                    "key": "name",
+                    "type": "string",
+                    "status": "available",
+                    "required": true,
+                    "array": false,
+                    "size": 100,
+                    "default": null
+                },
+                {
+                    "key": "designation",
+                    "type": "string",
+                    "status": "available",
+                    "required": true,
+                    "array": false,
+                    "size": 100,
+                    "default": null
+                },
+                {
+                    "key": "linkedin",
+                    "type": "string",
+                    "status": "available",
+                    "required": false,
+                    "array": false,
+                    "format": "url",
+                    "default": null
+                },
+                {
+                    "key": "image_id",
+                    "type": "string",
+                    "status": "available",
+                    "required": true,
+                    "array": false,
+                    "size": 100,
+                    "default": null
+                }
+            ],
+            "indexes": []
+        }
+    ]
+}
