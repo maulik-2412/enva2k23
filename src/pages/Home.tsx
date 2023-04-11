@@ -19,11 +19,11 @@ const Home = () => {
             </text>
           </symbol>
           {/* Duplicate symbols*/}
-          <use class="text" xlinkHref="#s-text" />
-          <use class="text" xlinkHref="#s-text" />
-          <use class="text" xlinkHref="#s-text" />
-          <use class="text" xlinkHref="#s-text" />
-          <use class="text" xlinkHref="#s-text" />
+          <use className="text" xlinkHref="#s-text" />
+          <use className="text" xlinkHref="#s-text" />
+          <use className="text" xlinkHref="#s-text" />
+          <use className="text" xlinkHref="#s-text" />
+          <use className="text" xlinkHref="#s-text" />
           {/* Insert SVG code */}
           <g
             dangerouslySetInnerHTML={{

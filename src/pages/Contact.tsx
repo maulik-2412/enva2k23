@@ -1,4 +1,3 @@
-import React from "react";
 import Particle from "../components/Particle";
 import email from "../assets/contactpageimg/email.png";
 import location from "../assets/contactpageimg/location.png";
@@ -69,14 +68,13 @@ const Contact = () => {
 
               <a href="https://twitter.com/prakriti_msit"
                 target="_blank"
-                alt="twitter"
                 rel="noreferrer">
                 <i className="fab fa-twitter"></i>
               </a>
               <a
                 href="https://www.instagram.com/prakriti_msit/"
                 target="_blank"
-                alt="insta"
+
                 rel="noreferrer"
               >
                 <i className="fab fa-instagram"></i>
@@ -84,7 +82,6 @@ const Contact = () => {
               <a
                 href="https://www.linkedin.com/company/prakritimsit/mycompany/"
                 target="_blank"
-                alt="linkedin"
                 rel="noreferrer"
               >
                 <i className="fab fa-linkedin-in"></i>

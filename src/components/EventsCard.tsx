@@ -1,5 +1,3 @@
-import React from "react";
-
 const EventsCard = () => {
   return (
       <div className="card">

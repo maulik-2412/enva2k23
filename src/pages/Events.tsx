@@ -1,4 +1,3 @@
-import React from 'react'
 import EventsCard from '../components/EventsCard'
 import Particle from '../components/Particle'
 const Events = () => {

@@ -7,6 +7,7 @@ export const getCurrentUser = async () => {
   try {
     return account.get();
   } catch (error) {
+    
     throw new Error(error.message);
   }
 };
