@@ -19,12 +19,11 @@ function App() {
   const getuser = () => {
     getCurrentUser()
       .then((res) => {
-        console.log(res);
         setloading(false);
       })
       .catch(async (err) => {
         await login();
-        console.log(err);
+        console.error(err);
         setloading(false);
       });
   };
