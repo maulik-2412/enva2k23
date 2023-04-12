@@ -15,7 +15,7 @@ import Particle from "./components/Particle";
 import { getCurrentUser, login } from "./api/auth";
 import Footer from "./pages/Footer";
 function App() {
-  const [loading, setloading] = useState(false);
+  const [loading, setloading] = useState(true);
   const getuser = () => {
     getCurrentUser()
       .then((res) => {
