@@ -1,4 +1,3 @@
-
 const About = () => {
   return (
     <div className="about-page" id="about">
@@ -21,7 +20,7 @@ const About = () => {
         </div>
         <div className="when">
           <h3>WHEN</h3>
-          <p>Coming Soon</p>
+          <p>19-20 April 2023</p>
         </div>
       </div>
     </div>

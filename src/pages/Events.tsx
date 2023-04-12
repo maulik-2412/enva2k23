@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import EventsCard from "../components/EventsCard";
-import Particle from "../components/Particle";
 import { getEvents } from "../api/database";
 import { Event } from "../models/event";
 
@@ -14,20 +13,21 @@ const Events = () => {
   useEffect(() => {
     getData();
   }, []);
-  return (
-    <div className="eventpage" id="events">
-      {events.map((event) => (
-        <EventsCard />
-      ))}
+  if (events.length > 0)
+    return (
+      <div className="eventpage" id="events">
+        {events.map((event) => (
+          <EventsCard event={event} />
+        ))}
 
-      {/* <EventsCard />
+        {/* <EventsCard />
       <EventsCard />
       <EventsCard />
       <EventsCard />
       <EventsCard />
       <Particle /> */}
-    </div>
-  );
+      </div>
+    );
 };
 
 export default Events;

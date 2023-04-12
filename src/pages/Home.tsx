@@ -36,7 +36,7 @@ const Home = () => {
           />
         </svg>
       </div>
-      <h1 className="coming-soon">COMING SOON</h1>
+      <h1 className="coming-soon">19-20 April 2023</h1>
     </div>
   );
 };

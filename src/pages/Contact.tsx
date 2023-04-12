@@ -52,9 +52,6 @@ const Contact = () => {
             </div>
             <div className="information">
               <img src={phone} className="icon" alt="" />
-              <p>Mayank: 9560585673</p>
-
-              <img src={phone} className="icon" alt="" />
               <p>Parth: 9999554630</p>
             </div>
           </div>

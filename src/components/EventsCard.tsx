@@ -1,23 +1,23 @@
-const EventsCard = () => {
-  return (
-      <div className="card">
-        <div className="card__content">
-          <div className="card__front">
-            <h3 className="card__title">Event1</h3>
-            <p className="card__subtitle">Open Mic </p>
-          </div>
+import { Event } from "../models/event";
 
-          <div className="card__back">
-            <p className="card__body">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit qui
-              perferendis tenetur iure quod provident sed quas dignissimos,
-              deleniti eos optio!
-              {/* <button>Register below</button> */}
-            </p>
-            <button className="event-register">Register</button>
-          </div>
+const EventsCard = (props: {event: Event}) => {
+  return (
+    <div className="card">
+      <div className="card__content">
+        <div className="card__front">
+          <h3 className="card__title">{props.event.event_name}</h3>
+          {/* <p className="card__subtitle">Open Mic </p> */}
+        </div>
+
+        <div className="card__back">
+          <p className="card__body">
+            {props.event.event_description}
+            {/* <button>Register below</button> */}
+          </p>
+          <button className="event-register">Register</button>
         </div>
       </div>
+    </div>
   );
 };
 
