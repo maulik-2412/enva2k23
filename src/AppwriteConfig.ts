@@ -1,5 +1,5 @@
 import { Client } from "appwrite";
-import { Constants } from "./constants";
+import { Constants } from "./utils/constants";
 
 export const client = new Client()
   .setEndpoint("https://cloud.appwrite.io/v1")
