@@ -1,5 +1,6 @@
 import { Client } from "appwrite";
+import { Constants } from "./constants";
 
 export const client = new Client()
   .setEndpoint("https://cloud.appwrite.io/v1")
-  .setProject(import.meta.env.REACT_APP_PROJECT_ID);
+  .setProject(Constants.PROJECT_ID);

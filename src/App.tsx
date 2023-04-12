@@ -12,35 +12,48 @@ import Team from "./pages/Team";
 import Preloader from "./pages/Preloader";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Particle from "./components/Particle";
+import { getCurrentUser, login } from "./api/auth";
 function App() {
   const [loading, setloading] = useState(true);
-  useEffect(() => {
-    if (loading) {
-      setTimeout(() => {
+  const getuser = () => {
+    getCurrentUser()
+      .then((res) => {
+        console.log(res);
         setloading(false);
-      }, 1000);
-    }
-  }, [loading]);
-  return (
-    <div className="App">
-      {loading ? (
-        <Preloader />
-      ) : (
-        <>
-          <Header />
-          <Particle />
-          <Header />
-          <Home />
-          <About />
-          <Events />
-          <Gallery />
-          <Sponsors />
-          <Contact />
-          <Team />
-        </>
-      )}
-    </div>
-  );
-}
+      })
+      .catch(async (err) => {
+        await login();
+        console.log(err);
+        setloading(false);
+      });}
+    useEffect(() => {
+      getuser();
+      // if (loading) {
+      //   setTimeout(() => {
+      //     setloading(false);
+      //   }, 1000);
+      // }
+    }, []);
+    return (
+      <div className="App">
+        {loading ? (
+          <Preloader />
+        ) : (
+          <>
+            <Header />
+            <Particle />
+            <Header />
+            <Home />
+            <About />
+            <Events />
+            <Gallery />
+            <Sponsors />
+            <Contact />
+            <Team />
+          </>
+        )}
+      </div>
+    );
+  };
 
 export default App;

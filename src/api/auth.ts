@@ -1,9 +1,9 @@
 import { client } from "../AppwriteConfig";
-import { Account, AppwriteException } from "appwrite";
+import { Account, AppwriteException, Models } from "appwrite";
 
 const account = new Account(client);
 
-export const getCurrentUser = async () => {
+export const getCurrentUser = async (): Promise<Models.Account<Models.Preferences>> => {
   try {
     return account.get();
   } catch (error) {
