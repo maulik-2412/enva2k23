@@ -1,11 +1,22 @@
-import React ,{useState}from "react";
+import React ,{useEffect, useRef, useState}from "react";
 import { Link
  } from "react-router-dom";
 import logo from "../assets/bg.png";
 const Header = () => {
     const [clicked,setclicked]=useState(false);
+    const [blurValue, setBlurValue] = useState(0);
+
+    useEffect(() => {
+      function handleScroll() {
+        const newBlurValue = Math.min(10, window.scrollY / 100);
+        setBlurValue(newBlurValue);
+      }
+  
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
     return (
-       <nav>
+       <nav id="navbar" style={{ backdropFilter: `blur(${blurValue}px)` }}>
          <div className="nav-logo"><a href="#"><img src={logo}/></a></div>
         <div>
             <ul className={`navbar`+` ${clicked? "":"active"}`}>
