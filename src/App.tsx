@@ -13,6 +13,7 @@ import Preloader from "./pages/Preloader";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Particle from "./components/Particle";
 import { getCurrentUser, login } from "./api/auth";
+import Footer from "./pages/Footer";
 function App() {
   const [loading, setloading] = useState(true);
   const getuser = () => {
@@ -48,8 +49,9 @@ function App() {
             <Events />
             <Gallery />
             <Sponsors />
-            <Contact />
+            {/* <Contact /> */}
             <Team />
+            <Footer/>
           </>
         )}
       </div>
