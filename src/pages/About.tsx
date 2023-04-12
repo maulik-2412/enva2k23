@@ -1,19 +1,10 @@
-import Particle from "../components/Particle";
+
 const About = () => {
   return (
-    <div>
-      <Particle />
-
-      
-
-      
+    <div className="about-page" id="about">
       <div className="about-section">
         <div className="about-event">
-          <h1>
-            ABOUT THE EVENT
-          </h1>
-
-
+          <h1>ABOUT THE EVENT</h1>
 
           <p>
             ENVA, the annual college Fest, organised by Prakriti MSIT is a

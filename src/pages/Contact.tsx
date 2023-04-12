@@ -5,44 +5,41 @@ import phone from "../assets/contactpageimg/phone.png";
 import shape from "../assets/contactpageimg/shape.png";
 import { useEffect } from "react";
 const Contact = () => {
-
-  useEffect(()=>{
+  useEffect(() => {
     const inputs = document.querySelectorAll(".input");
 
     function focusFunc() {
       let parent = this.parentNode;
       parent.classList.add("focus");
     }
-    
+
     function blurFunc() {
       let parent = this.parentNode;
       if (this.value === "") {
         parent.classList.remove("focus");
       }
     }
-    
+
     inputs.forEach((input) => {
       input.addEventListener("focus", focusFunc);
       input.addEventListener("blur", blurFunc);
     });
-    return ()=>{
+    return () => {
       inputs.forEach((input) => {
         input.removeEventListener("focus", focusFunc);
         input.removeEventListener("blur", blurFunc);
       });
-    }
-  },[])
+    };
+  }, []);
   return (
-    <div className="container">
-      <Particle />
-      <span className="big-circle"></span>
+    <div className="container" id="contact">
+      {/* <Particle />
+      <span className="big-circle"></span> */}
       <img src="" className="square" alt="" />
       <div className="form">
         <div className="contact-info">
           <h3 className="title">Reach Out</h3>
-          <p className="text">
-          
-          </p>
+          <p className="text"></p>
 
           <div className="info">
             <div className="information">
@@ -65,16 +62,16 @@ const Contact = () => {
           <div className="social-media">
             <p>Connect with us :</p>
             <div className="social-icons">
-
-              <a href="https://twitter.com/prakriti_msit"
+              <a
+                href="https://twitter.com/prakriti_msit"
                 target="_blank"
-                rel="noreferrer">
+                rel="noreferrer"
+              >
                 <i className="fab fa-twitter"></i>
               </a>
               <a
                 href="https://www.instagram.com/prakriti_msit/"
                 target="_blank"
-
                 rel="noreferrer"
               >
                 <i className="fab fa-instagram"></i>

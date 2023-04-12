@@ -5,18 +5,17 @@ import logo from "../assets/bg.png";
 const Header = () => {
     const [clicked,setclicked]=useState(false);
     return (
-      <div>
        <nav>
-        <div className="nav-logo"><Link to="/"><img src={logo}/></Link></div>
+         <div className="nav-logo"><a href="#"><img src={logo}/></a></div>
         <div>
             <ul className={`navbar`+` ${clicked? "":"active"}`}>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/events">Events</Link></li>
-                <li><Link to="/gallery">Gallery</Link></li>
-                <li><Link to="/sponsors">Sponsors</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
-                <li><Link to="/team">Team</Link></li>
+              <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#sponsors">Sponsors</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#team">Team</a></li>
             </ul>
         </div>
         <div className="mobile">
@@ -25,7 +24,7 @@ const Header = () => {
         }}></i>
         </div>
        </nav>
-      </div>
+
     );
   };
   

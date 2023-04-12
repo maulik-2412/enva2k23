@@ -1,17 +1,16 @@
-import EventsCard from '../components/EventsCard'
-import Particle from '../components/Particle'
+import EventsCard from "../components/EventsCard";
+import Particle from "../components/Particle";
 const Events = () => {
   return (
-    <div className='eventpage'>
-    
-      <EventsCard/>
-      <EventsCard/>
-      <EventsCard/>
-      <EventsCard/>
-      <EventsCard/>
-      <Particle/>
+    <div className="eventpage" id="events">
+      <EventsCard />
+      <EventsCard />
+      <EventsCard />
+      <EventsCard />
+      <EventsCard />
+      <Particle />
     </div>
-  )
-}
+  );
+};
 
-export default Events
+export default Events;

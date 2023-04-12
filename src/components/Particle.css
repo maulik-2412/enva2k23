@@ -1,8 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
-html, body {
+/* html, body {
   height: 100%;
   width:100%;
-}
+} */
 
 
 
@@ -24,7 +24,7 @@ html, body {
 }
 
 .bubble-container {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   will-change: transform;
   animation: bubblerise 4s infinite ease-in;

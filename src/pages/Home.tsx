@@ -1,15 +1,10 @@
 import React from "react";
 import Particle from "../components/Particle";
 
-
-
 const Home = () => {
   return (
-    <div>
-    
-      
-      <div className="home-content">
-        <Particle />
+    <div className="home-content">
+      <div className="home-page">
         {/*<Title/>*/}
         <svg viewBox="0 0 600 300">
           {/* Symbol*/}
@@ -41,7 +36,7 @@ const Home = () => {
           />
         </svg>
       </div>
- <h1 className="coming-soon">COMING SOON</h1>
+      <h1 className="coming-soon">COMING SOON</h1>
     </div>
   );
 };
