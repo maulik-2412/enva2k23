@@ -16,16 +16,18 @@ const Events = () => {
   if (events.length > 0)
     return (
       <div className="eventpage" id="events">
-        {events.map((event) => (
-          <EventsCard event={event} />
-        ))}
+        <div className="container">
+          {events.map((event) => (
+            <EventsCard event={event} />
+          ))}
 
-        {/* <EventsCard />
+          {/* <EventsCard />
       <EventsCard />
       <EventsCard />
       <EventsCard />
       <EventsCard />
       <Particle /> */}
+        </div>
       </div>
     );
 };
