@@ -7,6 +7,9 @@ const storage: Storage = new Storage(client);
 
 export const getFilePreview = async (bucketId: string, fileId: string): Promise<URL> => {
     try {
+        if (fileId.length === 0) {
+            return new URL("");
+        }
         const data = await storage.getFilePreview(bucketId, fileId, 500, 300);
         return data;
     } catch (error) {
