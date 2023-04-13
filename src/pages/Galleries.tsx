@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import img from "../assets/images/img.jpg";
 import { Gallery } from "../models/gallery";
 import { getGallery } from "../api/database";
+import { GalleryCard } from "../components/GalleryCard";
 
 const Galleries = () => {
   async function galleryData() {
@@ -18,7 +18,11 @@ const Galleries = () => {
     return (
       <div className="gallery_page" id="gallery">
         <h1>PAST EVENTS</h1>
-        <div className="portfolio"></div>
+        <div className="portfolio">
+          {gallery.map((item) => (
+            <GalleryCard gallery={item} />
+          ))}
+        </div>
       </div>
     );
 };

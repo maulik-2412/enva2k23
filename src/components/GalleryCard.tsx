@@ -1,6 +1,6 @@
 import { Gallery } from "../models/gallery";
 
-const GalleryCard = (props: { gallery: Gallery }) => {
+export const GalleryCard = (props: { gallery: Gallery }) => {
   return (
     <div className="gallery-card">
       <div className="content">
