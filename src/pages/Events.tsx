@@ -20,13 +20,6 @@ const Events = () => {
           {events.map((event) => (
             <EventsCard event={event} />
           ))}
-
-          {/* <EventsCard />
-      <EventsCard />
-      <EventsCard />
-      <EventsCard />
-      <EventsCard />
-      <Particle /> */}
         </div>
       </div>
     );
