@@ -246,7 +246,7 @@ for (let i = 0; i < bubbl.length; i++) {
 }
 }
 function getRandomColor() {
-  var colors = ['#66347F', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff']; // array of color codes
+  var colors = ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF']; // array of color codes
   var colorIndex = Math.floor(Math.random() * colors.length); // generate random index
   var color = colors[colorIndex]; // get color code from array
   return color; // return random color

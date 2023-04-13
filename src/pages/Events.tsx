@@ -3,13 +3,15 @@ import Particle from "../components/Particle";
 const Events = () => {
   return (
     <div className="eventpage" id="events">
-      <div className="container">
+       <ul className="cards">
+       <EventsCard/>
         <EventsCard/>
         <EventsCard/>
         <EventsCard/>
-        <EventsCard/>
+       </ul>
+
         {/* <Particle/> */}
-      </div>
+
    </div>  );
 };
 
