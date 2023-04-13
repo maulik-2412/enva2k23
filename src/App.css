@@ -253,7 +253,7 @@ nav {
   display: block;
   width: 100%;
   cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 2.5px solid rgba(255, 255, 255, 0.937);
   background: transparent;
 }
 
@@ -304,6 +304,7 @@ nav {
 }
 
 .card_title {
+  text-align: center;
   color: #ffffff;
   font-size: 1.1rem;
   font-weight: 700;
