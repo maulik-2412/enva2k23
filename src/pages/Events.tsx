@@ -16,7 +16,7 @@ const Events = () => {
   if (events.length > 0)
     return (
       <div className="eventpage" id="events">
-        <div className="container">
+        <div className="cards">
           {events.map((event) => (
             <EventsCard event={event} />
           ))}

@@ -1,20 +1,18 @@
 import { Event } from "../models/event";
 
-const EventsCard = (prop: { event: Event }) => {
+const EventsCard = (prop: {event: Event}) => {
   return (
-
-    <div className="event-card">
-      <img src="https://via.placeholder.com/150" alt={prop.event.event_name} />
-      <div className="event-details">
-        <h3>{prop.event.event_name}</h3>
-        <p>{prop.event.event_description}</p>
-        <a href="" className="register-btn">
-          Register Now
-        </a>
+<li className="cards_item">
+      <div className="card">
+        <div className="card_image"><img src="https://picsum.photos/500/300/?image=10"/></div>
+        <div className="card_content">
+          <h2 className="card_title">{prop.event.event_name}</h2>
+          <p className="card_text">{prop.event.event_description}</p>
+          <a href="" className="btn card_btn">Register</a>
+        </div>
       </div>
-    </div>
+    </li>
   );
-};
-
+  }
 export default EventsCard;
 
