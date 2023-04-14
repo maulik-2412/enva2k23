@@ -890,7 +890,7 @@ ul{
   left:0%;
   /* top:92px; */
   width:100%;
-  background-color: white;
+  background: linear-gradient(to bottom left, #0f0f0f 60%, #ddf5f6 100%);
   height:550px;
 }
 .event-closing-menu{
@@ -904,6 +904,7 @@ ul{
   font-size: 1.5rem;
   font-weight: bold;
   margin-right: auto;
+  color:white;
 }
 .event-closing-menu i:hover{
   color:red;
@@ -915,9 +916,9 @@ ul{
 }
 .event-desc h1{
   font-size: 2rem;
-  background-color: rgb(231, 71, 71);
+  background-color: white;
   margin-bottom:1em;
-  color:white;
+  color:black;
   font-weight: bolder;
 }
 .event-desc p{
@@ -928,6 +929,7 @@ ul{
   text-justify: inter-word;
   padding-bottom: 1em;
   margin-bottom: 3em;
+  color:white;
 }
 .event-register-btn{
   object-fit: contain;
