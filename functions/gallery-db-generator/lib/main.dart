@@ -23,14 +23,14 @@ class Gallery {
   });
 
   Map<String, dynamic> toMap() => {
-        'eventName': eventName,
-        'eventImageId': eventImageId,
+        'event_name': eventName,
+        'event_img_id': eventImageId,
       };
 
   factory Gallery.fromMap(Map<String, dynamic> map) {
     return Gallery(
-      eventName: map['eventName'],
-      eventImageId: map['eventImageId'],
+      eventName: map['event_name'],
+      eventImageId: map['event_img_id'],
     );
   }
 }
@@ -42,7 +42,8 @@ Future<void> start(final req, final res) async {
 
   final storage = Storage(client);
 
-  if (req.variables['APPWRITE_FUNCTION_ENDPOINT'] == null || req.variables['APPWRITE_FUNCTION_API_KEY'] == null) {
+  if (req.variables['APPWRITE_FUNCTION_ENDPOINT'] == null ||
+      req.variables['APPWRITE_FUNCTION_API_KEY'] == null) {
     print("Environment variables are not set. Function cannot use Appwrite SDK.");
   } else {
     client
@@ -52,6 +53,8 @@ Future<void> start(final req, final res) async {
         .setSelfSigned(status: true);
   }
 
+  const databaseId = 'envadb';
+
   /// Get the Gallery Bucket
   try {
     final galleryBucketData = await storage.listFiles(bucketId: 'gallery');
@@ -59,7 +62,7 @@ Future<void> start(final req, final res) async {
     int documentsAdded = 0;
 
     final galleryCollectionData = await database.listDocuments(
-      databaseId: 'envadb',
+      databaseId: databaseId,
       collectionId: 'gallery',
     );
     if (galleryBucketData.total == 0) {
@@ -75,7 +78,7 @@ Future<void> start(final req, final res) async {
           if (!data.any((element) => element.eventImageId == file)) {
             documentsAdded++;
             await database.createDocument(
-              databaseId: 'gallery',
+              databaseId: databaseId,
               documentId: ID.unique(),
               collectionId: 'gallery',
               data: Gallery(
@@ -91,7 +94,7 @@ Future<void> start(final req, final res) async {
         for (var file in galleryBucketDataList) {
           documentsAdded++;
           await database.createDocument(
-            databaseId: 'gallery',
+            databaseId: databaseId,
             documentId: ID.unique(),
             collectionId: 'gallery',
             data: Gallery(
