@@ -1,18 +1,28 @@
+import { useEffect, useState } from "react";
 import EventsCard from "../components/EventsCard";
-import Particle from "../components/Particle";
+import { getEvents } from "../api/database";
+import { Event } from "../models/event";
+
 const Events = () => {
-  return (
-    <div className="eventpage" id="events">
-       <ul className="cards">
-       <EventsCard/>
-        <EventsCard/>
-        <EventsCard/>
-        <EventsCard/>
-       </ul>
+  async function getData() {
+    const response = await getEvents();
 
-        {/* <Particle/> */}
-
-   </div>  );
+    setEvents(response);
+  }
+  const [events, setEvents] = useState<Event[]>([]);
+  useEffect(() => {
+    getData();
+  }, []);
+  if (events.length > 0)
+    return (
+      <div className="eventpage" id="events">
+        <div className="cards">
+          {events.map((event) => (
+            <EventsCard event={event} />
+          ))}
+        </div>
+      </div>
+    );
 };
 
 export default Events;

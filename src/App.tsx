@@ -3,12 +3,12 @@ import "./App.css";
 import "./index.css";
 import Header from "./components/Header";
 import Home from "./pages/Home";
-import Gallery from "./pages/Gallery";
+import Galleries from "./pages/Galleries";
 import About from "./pages/About";
 import Events from "./pages/Events";
 import Sponsors from "./pages/Sponsors";
 import Contact from "./pages/Contact";
-import Team from "./pages/Team";
+import Team from "./pages/Teams";
 import Preloader from "./pages/Preloader";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Particle from "./components/Particle";
@@ -19,43 +19,42 @@ function App() {
   const getuser = () => {
     getCurrentUser()
       .then((res) => {
-        console.log(res);
         setloading(false);
       })
       .catch(async (err) => {
         await login();
-        console.log(err);
+        console.error(err);
         setloading(false);
-      });}
-    useEffect(() => {
-      getuser();
-      // if (loading) {
-      //   setTimeout(() => {
-      //     setloading(false);
-      //   }, 1000);
-      // }
-    }, []);
-    return (
-      <div className="App">
-        {loading ? (
-          <Preloader />
-        ) : (
-          <>
-            <Header />
-            <Particle />
-            <Header />
-            <Home />
-            <About />
-            <Events />
-            <Gallery />
-            <Sponsors />
-            {/* <Contact /> */}
-            <Team />
-            <Footer/>
-          </>
-        )}
-      </div>
-    );
+      });
   };
+  useEffect(() => {
+    getuser();
+    // if (loading) {
+    //   setTimeout(() => {
+    //     setloading(false);
+    //   }, 1000);
+    // }
+  }, []);
+  return (
+    <div className="App">
+      {loading ? (
+        <Preloader />
+      ) : (
+        <>
+          <Header />
+          <Particle />
+          <Header />
+          <Home />
+          <About />
+          <Events />
+          <Galleries />
+          <Sponsors />
+          <Team />
+          <Footer />
+        </>
+      )}
+    </div>
+  );
+}
 
 export default App;

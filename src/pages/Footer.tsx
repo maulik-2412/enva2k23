@@ -1,4 +1,4 @@
-import phone from '../assets/contactpageimg/phone.png';
+import phone from '../assets/contact/phone.png';
 const Footer = () => {
   return (
     <div className="footer-page" id="contact">
@@ -14,21 +14,9 @@ const Footer = () => {
   	 				<li><a href="#team">Team</a></li>
   	 			</ul>
   	 		</div>
-  	 		{/* <div className="footer-col">
-  	 			<h4>get help</h4>
-  	 			<ul>
-  	 				<li><a href="#">FAQ</a></li>
-  	 				<li><a href="#">shipping</a></li>
-  	 				<li><a href="#">returns</a></li>
-  	 				<li><a href="#">order status</a></li>
-  	 				<li><a href="#">payment options</a></li>
-  	 			</ul>
-  	 		</div> */}
   	 		<div className="footer-col">
   	 			<h4>Contact</h4>
   	 			<ul>
-  	 				<li><img src={phone} className="icon" alt="" />
-              <p>Mayank: 9560585673</p></li>
   	 				<li><img src={phone} className="icon" alt="" />
               <p>Abhay: 8588016266</p></li>
   	 				<li><img src={phone} className="icon" alt="" />
