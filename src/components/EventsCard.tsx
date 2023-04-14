@@ -20,11 +20,11 @@ const EventsCard = (prop: { event: Event }) => {
     getImage();
   }, []);
   return (
-    <div>
+    <div className="cards_item">
       {showDesc ? (
         <EventDescription close={showDescription}/>
       ) : (
-        <li className="cards_item">
+        // <li className="cards_item">
           <div className="card">
             <div className="card_image">
               <img
@@ -43,7 +43,7 @@ const EventsCard = (prop: { event: Event }) => {
               </button>
             </div>
           </div>
-        </li>
+        // </li>
       )}
     </div>
   );
