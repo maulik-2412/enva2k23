@@ -25,13 +25,13 @@ nav {
 }
 
 .nav-logo {
-  width: 100px;
+  width: 180px;
   height: auto;
 }
 
 .nav-logo img {
   opacity: 1 !important;
-  width: 100%;
+  width:100%;
   height: auto;
   cursor: pointer;
 }
@@ -130,18 +130,17 @@ nav {
 
 
 .about-page {
-  display: block;
+  text-align: center;
+  width:100%;
+  margin:auto;
   margin-bottom: 4em;
   padding-top: 92px;
 }
 
-
-
 .about-section {
-  display: block;
   color: white;
   width: 100%;
-  padding: 0px 4em;
+  margin: 0px auto;
   /* position: absolute; */
   top: 40%;
   left: 0%;
@@ -151,12 +150,12 @@ nav {
 }
 
 .about-event {
-  width: 40%;
+  width: 30%;
 }
 
 .where,
 .when {
-  width: 20%;
+  width: 30%;
 }
 
 .about-section h1,
@@ -173,6 +172,7 @@ nav {
 }
 
 .about-section p {
+  text-justify: distribute-all-lines;
   animation: text 3s 1s both;
   font-weight: lighter;
 }
@@ -227,14 +227,14 @@ nav {
   margin: 0 auto;
 }
 
+
 .eventpage h1 {
   font-family: 'Poppins', serif;
   margin-bottom: 1em;
     color:white;
-    font-size: 24px;
+    font-size:3rem;
     font-weight: bolder;
     text-align: center;
-
 }
 
 .card img{
@@ -412,6 +412,7 @@ svg {
   --clr-neon: hsl(179, 67%, 36%);
   --clr-bg: hsl(240, 52%, 6%);
 }
+
 
 
 
@@ -773,6 +774,7 @@ svg {
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); */
 /* Footer */
 .footer-page{
+  margin-top:4em;
   line-height: 1.5;
 	font-family: 'Poppins', sans-serif;
 }
@@ -874,6 +876,7 @@ ul{
 
 /* Event description */
 .event-description-page{
+  z-index:10000;
   animation: eventanimation 1s;
   padding:1em;
   display: flex;
@@ -907,6 +910,7 @@ ul{
 }
 .event-desc{
   text-align: center;
+  padding:0px 3em;
 
 }
 .event-desc h1{
