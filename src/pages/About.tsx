@@ -8,7 +8,7 @@ const About = () => {
           <p>
             ENVA, the annual college Fest, organised by Prakriti MSIT is a
             fun-packed, frolicsome event which is a 2-day-long event held in
-            January. The fest not only sees involvement of students, but also
+            April. The fest not only sees involvement of students, but also
             teachers, showcasing wholesome senior-junior interaction. With a
             plethora of exciting events, enjoyable activities and amazing prizes
             to be won, it ensures everlasting fun..
