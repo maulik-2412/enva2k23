@@ -871,3 +871,83 @@ ul{
   color:white;
   margin-bottom: 0.5em;
 }
+
+/* Event description */
+.event-description-page{
+  animation: eventanimation 1s;
+  padding:1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: none;
+  overflow-y: scroll;
+  border:2px solid white;
+  border-radius:10px;
+  position: absolute;
+  top:92px;
+  width:100%;
+  background-color: white;
+  height:100vh;
+}
+.event-closing-menu{
+  margin-bottom: 1em;
+  width: 100%;
+}
+.event-closing-menu i{
+  cursor:pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: auto;
+}
+.event-closing-menu i:hover{
+  color:red;
+}
+.event-desc{
+  text-align: center;
+
+}
+.event-desc h1{
+  font-size: 2rem;
+  background-color: rgb(231, 71, 71);
+  margin-bottom:1em;
+  color:white;
+  font-weight: bolder;
+}
+.event-desc p{
+  border-bottom: 1px solid grey;
+  font-size: 1.2rem;
+  word-spacing: 2px;
+  text-align: justify;
+  text-justify: inter-word;
+  padding-bottom: 1em;
+  margin-bottom: 3em;
+}
+.event-register-btn{
+  object-fit: contain;
+  position:sticky;
+  bottom:0%;
+  z-index:1000;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 0.8rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  border-radius: 4px;
+  width: auto;
+  cursor: pointer;
+  border: 2.5px solid rgba(255, 255, 255, 0.937);
+  background: linear-gradient(to bottom left, #0f0f0f 60%, #ddf5f6 100%);
+}
+.event-register-btn:hover{
+  background: linear-gradient(to bottom left, #e11b1b 40%, #ddf5f6 100%);
+}
+
+@keyframes eventanimation{
+  0%{
+    opacity:0
+  }
+  100%{
+    opacity:1
+  }
+}
