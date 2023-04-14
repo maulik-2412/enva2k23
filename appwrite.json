@@ -135,5 +135,22 @@
             ],
             "indexes": []
         }
+    ],
+    "functions": [
+        {
+            "$id": "gallery-fun",
+            "name": "Gallery-db-generator",
+            "runtime": "dart-2.17",
+            "path": "functions/gallery-db-generator",
+            "entrypoint": "lib/main.dart",
+            "ignore": [
+                ".dart-tool",
+                ".pubspec.lock"
+            ],
+            "execute": [],
+            "events": [],
+            "schedule": "",
+            "timeout": 15
+        }
     ]
 }

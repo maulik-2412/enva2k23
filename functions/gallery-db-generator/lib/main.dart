@@ -42,8 +42,7 @@ Future<void> start(final req, final res) async {
 
   final storage = Storage(client);
 
-  if (req.variables['APPWRITE_FUNCTION_ENDPOINT'] == null ||
-      req.variables['APPWRITE_FUNCTION_API_KEY'] == null) {
+  if (req.variables['APPWRITE_FUNCTION_ENDPOINT'] == null || req.variables['APPWRITE_FUNCTION_API_KEY'] == null) {
     print("Environment variables are not set. Function cannot use Appwrite SDK.");
   } else {
     client
@@ -60,7 +59,7 @@ Future<void> start(final req, final res) async {
     int documentsAdded = 0;
 
     final galleryCollectionData = await database.listDocuments(
-      databaseId: 'gallery',
+      databaseId: 'envadb',
       collectionId: 'gallery',
     );
     if (galleryBucketData.total == 0) {
