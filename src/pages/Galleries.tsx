@@ -17,7 +17,7 @@ const Galleries = () => {
   if (gallery.length > 0)
     return (
       <div className="gallery_page" id="gallery">
-        <h1>PAST EVENTS</h1>
+        <h1>GALLERY</h1>
         <div className="portfolio">
           {gallery.map((item) => (
             <GalleryCard gallery={item} />
