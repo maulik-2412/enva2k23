@@ -144,8 +144,8 @@
             "path": "functions/gallery-db-generator",
             "entrypoint": "lib/main.dart",
             "ignore": [
-                ".dart-tool",
-                ".pubspec.lock"
+                ".packages",
+                ".dart_tool"
             ],
             "execute": [],
             "events": [],
