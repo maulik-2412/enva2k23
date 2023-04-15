@@ -620,6 +620,7 @@ svg {
 .portfolio {
 
   padding: 1.5em;
+  padding-top: 2.5rem;
   margin: auto;
   font-family: -apple-system, BlinkMacSystemFont, "Poppins", "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -645,7 +646,7 @@ svg {
 
 .gallery-card {
   background: rgb(190, 188, 188, 0.4);
-  width: 25%;
+  width: 28%;
   height: auto;
   overflow: hidden;
   position: relative;
