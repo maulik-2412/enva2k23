@@ -13,24 +13,24 @@ import 'package:dart_appwrite/dart_appwrite.dart';
   If an error is thrown, a response with code 500 will be returned.
 */
 
-class Gallery {
-  final String eventName;
-  final String eventImageId;
+class Sponsor {
+  final String sponsorName;
+  final String imageId;
 
-  const Gallery({
-    required this.eventName,
-    required this.eventImageId,
+  const Sponsor({
+    required this.sponsorName,
+    required this.imageId,
   });
 
   Map<String, dynamic> toMap() => {
-        'event_name': eventName,
-        'event_img_id': eventImageId,
+        'sponsor_name': sponsorName,
+        'image_id': imageId,
       };
 
-  factory Gallery.fromMap(Map<String, dynamic> map) {
-    return Gallery(
-      eventName: map['event_name'],
-      eventImageId: map['event_img_id'],
+  factory Sponsor.fromMap(Map<String, dynamic> map) {
+    return Sponsor(
+      sponsorName: map['sponsor_name'],
+      imageId: map['image_id'],
     );
   }
 }
@@ -55,50 +55,50 @@ Future<void> start(final req, final res) async {
 
   const databaseId = 'envadb';
 
-  /// Get the Gallery Bucket
+  /// Get the Sponsor Bucket
   try {
-    final galleryBucketData = await storage.listFiles(bucketId: 'gallery');
+    final sponsorBucketData = await storage.listFiles(bucketId: 'sponsors');
 
     int documentsAdded = 0;
 
-    final galleryCollectionData = await database.listDocuments(
+    final sponsorCollectionData = await database.listDocuments(
       databaseId: databaseId,
-      collectionId: 'gallery',
+      collectionId: 'sponsors',
     );
-    if (galleryBucketData.total == 0) {
+    if (sponsorBucketData.total == 0) {
       res.json({
-        'message': 'No images found in the gallery bucket',
+        'message': 'No Logos found in the gallery bucket',
       });
       return;
-    } else if (galleryBucketData.total > 0) {
-      if (galleryCollectionData.total != 0) {
-        final data = galleryCollectionData.documents.map((e) => Gallery.fromMap(e.data)).toList();
-        final galleryBucketDataList = galleryBucketData.files.map((e) => e.$id).toList();
-        for (var file in galleryBucketDataList) {
-          if (!data.any((element) => element.eventImageId == file)) {
+    } else if (sponsorBucketData.total > 0) {
+      if (sponsorCollectionData.total != 0) {
+        final data = sponsorCollectionData.documents.map((e) => Sponsor.fromMap(e.data)).toList();
+        final sponsorBucketList = sponsorBucketData.files.map((e) => e.$id).toList();
+        for (var file in sponsorBucketList) {
+          if (!data.any((element) => element.imageId == file)) {
             documentsAdded++;
             await database.createDocument(
               databaseId: databaseId,
               documentId: ID.unique(),
-              collectionId: 'gallery',
-              data: Gallery(
-                eventName: file.toUpperCase(),
-                eventImageId: file,
+              collectionId: 'sponsors',
+              data: Sponsor(
+                sponsorName: file.toUpperCase(),
+                imageId: file,
               ).toMap(),
             );
           }
         }
       } else {
-        final galleryBucketDataList = galleryBucketData.files.map((e) => e.$id).toList();
+        final galleryBucketDataList = sponsorBucketData.files.map((e) => e.$id).toList();
         for (var file in galleryBucketDataList) {
           documentsAdded++;
           await database.createDocument(
             databaseId: databaseId,
             documentId: ID.unique(),
-            collectionId: 'gallery',
-            data: Gallery(
-              eventName: file.toUpperCase(),
-              eventImageId: file,
+            collectionId: 'sponsors',
+            data: Sponsor(
+              sponsorName: file.toUpperCase(),
+              imageId: file,
             ).toMap(),
           );
         }
