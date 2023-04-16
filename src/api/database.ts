@@ -85,7 +85,7 @@ export const getGallery = async (): Promise<Gallery[]> => {
     );
     return data.documents.map<Gallery>((gallery) => ({
       event_name: gallery.event_name,
-      event_image_id: gallery.event_image_id,
+      event_image_id: gallery.event_img_id,
       url: gallery.url,
     }))
   } catch (error) {

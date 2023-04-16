@@ -12,5 +12,6 @@ export const Constants = {
     EVENT_BUCKET: "events",
     SPONSORHIP_BUCKET: "sponsors",
     TEAM_BUCKET: "team-photos",
+    GALLERY_BUCKET: "gallery",
 
 }

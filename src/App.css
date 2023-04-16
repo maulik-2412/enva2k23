@@ -104,6 +104,7 @@ nav {
   .mobile {
     cursor: pointer;
     display: block;
+    padding-right: 10px;
   }
 
   .navbar li {
@@ -140,13 +141,14 @@ nav {
 .about-section {
   color: white;
   width: 100%;
-  margin: 0px auto;
+  padding-left: 7rem;
   /* position: absolute; */
   top: 40%;
   left: 0%;
   display: flex;
   align-self: center;
   justify-content: space-around;
+  text-align: left;
 }
 
 .about-event {
@@ -175,12 +177,15 @@ nav {
   text-justify: distribute-all-lines;
   animation: text 3s 1s both;
   font-weight: lighter;
+  text-align: left;
 }
 
 @media (max-width:600px) {
   .about-section {
     flex-direction: column;
     top: 17%;
+    margin: 0px auto;
+    text-align: center;
   }
 
   .about-event {
@@ -196,6 +201,10 @@ nav {
     margin-bottom: 1.5em;
   }
 
+
+.about-section p {
+  text-align: center;
+}
 
 
 }
@@ -286,6 +295,11 @@ nav {
     width: 33.3333%;
   }
 }
+/* @media (max-width:600px){
+  .eventpage{
+    padding-top: 50px;
+  }
+} */
 
 .card {
   /* background-color: white; */
@@ -300,8 +314,6 @@ nav {
 .card_content {
   padding: 1rem;
   background: linear-gradient(to bottom left, #0f0f0f 40%, #ddf5f6 100%);
-  
-  
 }
 
 .card_title {
@@ -312,6 +324,7 @@ nav {
   letter-spacing: 1px;
   text-transform: capitalize;
   margin: 0px;
+  padding-bottom: 0.5rem;
 }
 
 .card_text {
@@ -320,6 +333,9 @@ nav {
   line-height: 1.5;
   margin-bottom: 1.25rem;    
   font-weight: 400;
+  height: 11rem;
+  text-align: justify;
+  padding: 0 0.5rem;
 }
 .made_by{
   font-weight: 400;
@@ -616,6 +632,7 @@ svg {
 .portfolio {
 
   padding: 1.5em;
+  padding-top: 2.5rem;
   margin: auto;
   font-family: -apple-system, BlinkMacSystemFont, "Poppins", "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -641,7 +658,7 @@ svg {
 
 .gallery-card {
   background: rgb(190, 188, 188, 0.4);
-  width: 25%;
+  width: 28%;
   height: auto;
   overflow: hidden;
   position: relative;

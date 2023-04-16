@@ -1,0 +1,13 @@
+name: gallery_db_genrator
+description: A cloud function which generates the documents for you when you add a new photo in the gallery bucket
+version: 1.0.0
+publish_to: "none"
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+dependencies:
+  dart_appwrite: ^8.0.0
+
+dev_dependencies:
+  lints: ^2.0.1

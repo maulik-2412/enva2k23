@@ -135,5 +135,37 @@
             ],
             "indexes": []
         }
+    ],
+    "functions": [
+        {
+            "$id": "gallery-fun",
+            "name": "Gallery-db-generator",
+            "runtime": "dart-2.17",
+            "path": "functions/gallery-db-generator",
+            "entrypoint": "lib/main.dart",
+            "ignore": [
+                ".packages",
+                ".dart_tool"
+            ],
+            "execute": [],
+            "events": [],
+            "schedule": "",
+            "timeout": 15
+        },
+        {
+            "$id": "sponsor-db-gen",
+            "name": "Sponsor Db generator",
+            "runtime": "dart-2.17",
+            "path": "functions/Sponsor Db generator",
+            "entrypoint": "lib/main.dart",
+            "ignore": [
+                ".packages",
+                ".dart_tool"
+            ],
+            "execute": [],
+            "events": [],
+            "schedule": "",
+            "timeout": 15
+        }
     ]
 }

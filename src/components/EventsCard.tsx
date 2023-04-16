@@ -29,7 +29,7 @@ const EventsCard = (prop: { event: Event }) => {
             <div className="card_image">
               <img
                 src={
-                  image.length == 0
+                 ( image.length == 0 || image == undefined || image == null)
                     ? "https://picsum.photos/500/300/?image=10"
                     : image
                 }
