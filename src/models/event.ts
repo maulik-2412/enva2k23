@@ -5,4 +5,5 @@ export interface Event {
     event_description: string;
     event_image_id: string;
     day: EventDay;
+    reg_link:string;
 }

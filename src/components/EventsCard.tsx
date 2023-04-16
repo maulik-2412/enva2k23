@@ -5,10 +5,10 @@ import { Constants } from "../utils/constants";
 import EventDescription from "./EventDescription";
 const EventsCard = (prop: { event: Event }) => {
   const [image, setImage] = useState<string>("");
-  const [showDesc, setShowDesc] = useState(false);
-  const showDescription = () => {
-    setShowDesc(!showDesc);
-  };
+  // const [showDesc, setShowDesc] = useState(false);
+  // const showDescription = () => {
+  //   setShowDesc(!showDesc);
+  // };
   async function getImage() {
     const response = await getFilePreview(
       Constants.EVENT_BUCKET,
@@ -20,11 +20,7 @@ const EventsCard = (prop: { event: Event }) => {
     getImage();
   }, []);
   return (
-    <div className="cards_item">
-      {showDesc ? (
-        <EventDescription close={showDescription}/>
-      ) : (
-        // <li className="cards_item">
+        <li className="cards_item">
           <div className="card">
             <div className="card_image">
               <img
@@ -38,14 +34,12 @@ const EventsCard = (prop: { event: Event }) => {
             <div className="card_content">
               <h2 className="card_title">{prop.event.event_name}</h2>
               <p className="card_text">{prop.event.event_description}</p>
-              <button className="btn card_btn" onClick={showDescription}>
-                Know More
-              </button>
+              <a href={prop.event.reg_link} className="btn card_btn">
+              REGISTER
+              </a>
             </div>
           </div>
-        // </li>
-      )}
-    </div>
+        </li>
   );
 };
 export default EventsCard;

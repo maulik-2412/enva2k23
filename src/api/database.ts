@@ -19,7 +19,7 @@ export const getEvents = async (): Promise<Event[]> => {
       event_description: event.event_description,
       event_image_id: event.event_image_id,
       day: event.day,
-
+      reg_link:event.reg_link
     }))
   } catch (error) {
     error as AppwriteException;
