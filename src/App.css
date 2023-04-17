@@ -141,43 +141,61 @@ nav {
 .about-section {
   color: white;
   width: 100%;
-  padding-left: 7rem;
+  
   /* position: absolute; */
   top: 40%;
   left: 0%;
-  display: flex;
+  display: relative;
   align-self: center;
   justify-content: space-around;
-  text-align: left;
+  text-align: center;
+  height: fit-content;
+  align-items: center;
 }
 
 .about-event {
-  width: 30%;
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  padding-left: 0;
 }
 
 .where,
 .when {
-  width: 30%;
+  width: 90%;
+  text-align:center;
+  margin: auto;
+  margin-bottom: 5%;
 }
-
+.where-p{
+  text-align: center;
+  font-size: 1.5rem;
+  
+}
+.about-p{
+ text-align:justify;
+ font-size:1.5rem;
+}
+.about-map{
+  width:60%;
+  height: 450px;
+  margin:auto;
+}
 .about-section h1,
 .about-section h3 {
-  animation: text 3s both;
-  font-weight: bolder;
+  animation: text 3s both,lights 5s 750ms linear infinite;
+  font-weight: 1000;
   font-size: 2.5rem;
   margin-bottom: 0.2em;
 }
 
-.about-section h1:hover,
-.about-section h3:hover {
-  border-bottom: 2px solid white;
-}
+
 
 .about-section p {
   text-justify: distribute-all-lines;
   animation: text 3s 1s both;
   font-weight: lighter;
-  text-align: left;
+  
 }
 
 @media (max-width:600px) {
@@ -247,9 +265,11 @@ nav {
 }
 
 .card img{
+  aspect-ratio: 3/2;
   height: auto;
   max-width: 100%;
   vertical-align: middle;
+
 }
 
 .btn {
@@ -428,7 +448,9 @@ svg {
   --clr-neon: hsl(179, 67%, 36%);
   --clr-bg: hsl(240, 52%, 6%);
 }
-
+.coming-soon{
+  margin-top: 5%;
+}
 
 
 
@@ -997,4 +1019,54 @@ ul{
 .event-description-page::-webkit-scrollbar-thumb {
   background-color: #d4d4d4;
   border-radius: 10px;
+}
+h1{
+  animation: lights 5s 750ms linear infinite;
+}
+@keyframes lights {
+  0% {
+    color: hsl(230, 40%, 80%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.2),
+      0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+  
+  30% { 
+    color: hsl(230, 80%, 90%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 60%, 0.5),
+      -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+  
+  40% { 
+    color: hsl(230, 100%, 95%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 90%, 0.5),
+      -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+      0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+  }
+  
+  70% {
+    color: hsl(230, 80%, 90%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 60%, 0.5),
+      0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+  
+  100% {
+    color: hsl(230, 40%, 80%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.2),
+      0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+  
 }

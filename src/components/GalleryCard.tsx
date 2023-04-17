@@ -7,7 +7,7 @@ export const GalleryCard = (props: { gallery: Gallery }) => {
   const [image, setImage] = useState<string>("");
 
   async function getImage() {
-    const response = await getFilePreview(Constants.GALLERY_BUCKET,props.gallery.event_image_id);
+    const response = await getFilePreview(Constants.GALLERY_BUCKET,props.gallery.event_image_id,500,300);
     setImage(response.href);
   }
 
