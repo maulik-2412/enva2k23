@@ -34,8 +34,8 @@ const EventsCard = (prop: { event: Event }) => {
             <div className="card_content">
               <h2 className="card_title">{prop.event.event_name}</h2>
               <p className="card_text">{prop.event.event_description}</p>
-              <a href={prop.event.reg_link} className="btn card_btn">
-              REGISTER
+              <a  href={prop.event.reg_link}className="btn card_btn" >
+                Know More
               </a>
             </div>
           </div>
