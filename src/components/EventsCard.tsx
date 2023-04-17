@@ -20,11 +20,7 @@ const EventsCard = (prop: { event: Event }) => {
     getImage();
   }, []);
   return (
-    <div className="cards_item">
-      {showDesc ? (
-        <EventDescription close={showDescription}/>
-      ) : (
-        // <li className="cards_item">
+        <li className="cards_item">
           <div className="card">
             <div className="card_image">
               <img
@@ -38,14 +34,12 @@ const EventsCard = (prop: { event: Event }) => {
             <div className="card_content">
               <h2 className="card_title">{prop.event.event_name}</h2>
               <p className="card_text">{prop.event.event_description}</p>
-              <button className="btn card_btn" onClick={showDescription}>
-                Know More
-              </button>
+              <a  href=""className="btn card_btn" onClick={showDescription}>  
+                Register
+              </a>
             </div>
           </div>
-        // </li>
-      )}
-    </div>
+        </li>
   );
 };
 export default EventsCard;
