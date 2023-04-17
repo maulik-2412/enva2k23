@@ -5,12 +5,12 @@ import { client } from "../AppwriteConfig";
 
 const storage: Storage = new Storage(client);
 
-export const getFilePreview = async (bucketId: string, fileId: string): Promise<URL> => {
+export const getFilePreview = async (bucketId: string, fileId: string, widht?: number, height?: number): Promise<URL> => {
     try {
         if (fileId.length === 0 || bucketId.length === 0 || fileId === undefined || bucketId === undefined || fileId === null || bucketId === null) {
             return new URL("");
         }
-        const data = await storage.getFilePreview(bucketId, fileId, 500, 300);
+        const data = await storage.getFilePreview(bucketId, fileId, widht, height);
         return data;
     } catch (error) {
         error as AppwriteException;
