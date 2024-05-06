@@ -1,7 +1,7 @@
 {
   "name": "lastapp",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "dependencies": {
     "@types/jest": "^29.5.0",
     "@types/node": "^18.15.11",
